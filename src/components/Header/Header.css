@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  position: fixed;
+  padding: 0.6rem;
+  background-color: bisque;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+
+@media screen and (min-width: 1025px) {
+  header {
+    font-size: 1.6rem;
+  }
+}

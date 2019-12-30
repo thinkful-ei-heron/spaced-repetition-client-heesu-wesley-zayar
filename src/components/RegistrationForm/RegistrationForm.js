@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { Input, Required, Label } from '../Form/Form'
-import AuthApiService from '../../services/auth-api-service'
-import Button from '../Button/Button'
-import './RegistrationForm.css'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Input, Required, Label } from '../Form/Form';
+import AuthApiService from '../../services/auth-api-service';
+import Button from '../Button/Button';
+import './RegistrationForm.css';
 
 class RegistrationForm extends Component {
   static defaultProps = {
@@ -42,6 +42,7 @@ class RegistrationForm extends Component {
     return (
       <form
         onSubmit={this.handleSubmit}
+        className='registerForm'
       >
         <div role='alert'>
           {error && <p>{error}</p>}
@@ -81,7 +82,7 @@ class RegistrationForm extends Component {
         <footer>
           <Button type='submit'>
             Sign up
-          </Button>
+          </Button> <br />
           {' '}
           <Link to='/login'>Already have an account?</Link>
         </footer>

@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import TokenService from '../../services/token-service'
-import UserContext from '../../contexts/UserContext'
-import './Header.css'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import TokenService from '../../services/token-service';
+import UserContext from '../../contexts/UserContext';
+import './Header.css';
 
 class Header extends Component {
   static contextType = UserContext
@@ -15,7 +15,7 @@ class Header extends Component {
     return (
       <div>
         <span>
-          {this.context.user.name}
+          Hello, {this.context.user.name}
         </span>
         <nav>
           <Link
@@ -41,11 +41,10 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <h1>
           <Link to='/'>
-            Spaced repetition
+            Spaced Repetition
           </Link>
-        </h1>
+
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}

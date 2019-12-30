@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { Input, Label } from '../Form/Form'
-import AuthApiService from '../../services/auth-api-service'
-import UserContext from '../../contexts/UserContext'
-import Button from '../Button/Button'
+import React, { Component } from 'react';
+import { Input, Label } from '../Form/Form';
+import AuthApiService from '../../services/auth-api-service';
+import UserContext from '../../contexts/UserContext';
+import Button from '../Button/Button';
 
 class LoginForm extends Component {
   static defaultProps = {
@@ -44,8 +44,8 @@ class LoginForm extends Component {
     const { error } = this.state
     return (
       <form
-        className='LoginForm'
         onSubmit={this.handleSubmit}
+        className='loginForm'
       >
         <div role='alert'>
           {error && <p>{error}</p>}

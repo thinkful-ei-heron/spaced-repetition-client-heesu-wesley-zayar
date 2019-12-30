@@ -1,0 +1,21 @@
+Form {
+  background-color: #dcf2fa;
+  border: 0.1rem solid #555252;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+Input {
+  font-size: 1.5rem;
+  margin: 0.7rem;
+}
+
+@media screen and (min-width: 1025px) {
+  Form {
+    max-width: 48rem;
+  }
+}

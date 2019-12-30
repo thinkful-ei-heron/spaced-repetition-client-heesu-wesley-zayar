@@ -8,6 +8,7 @@ export default class Dashboard extends Component {
   static contextType = LanguageContext
 
   state = {
+    loaded: false,
     words: [],
   }
 
@@ -16,6 +17,9 @@ export default class Dashboard extends Component {
       this.context.setLanguage(resp.language)
       this.context.setWords(resp.words)
     })
+      .then(() =>
+        this.setState({loaded: true})
+      )
   }
 
   render() {
@@ -29,7 +33,9 @@ export default class Dashboard extends Component {
         <section className="Dashboard-main">
           <h3>Words to Practice</h3>
           <div className="WordList">
-            {this.context.words.map(word => {
+
+            {(this.state.loaded && this.context.words) &&
+              this.context.words.map(word => {
               return (
                 <Word key={word.id} data={word} />
               )

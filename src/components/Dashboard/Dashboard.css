@@ -1,0 +1,9 @@
+.Dashboard h1 {
+  text-align: center;
+}
+
+.Dashboard {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95vw;
+}

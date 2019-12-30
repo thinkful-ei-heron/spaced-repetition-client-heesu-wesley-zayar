@@ -5,14 +5,17 @@ Form {
   font-size: 1.5rem;
   padding: 0.7rem;
   align-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 Input {
   font-size: 1.5rem;
-  margin: 0.7rem;
+  margin: 2%;
   text-align: left;
+}
+
+Label {
+  margin: 2%;
 }
 
 @media screen and (min-width: 1025px) {

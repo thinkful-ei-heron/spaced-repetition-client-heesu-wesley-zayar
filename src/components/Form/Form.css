@@ -12,6 +12,7 @@ Form {
 Input {
   font-size: 1.5rem;
   margin: 0.7rem;
+  text-align: left;
 }
 
 @media screen and (min-width: 1025px) {

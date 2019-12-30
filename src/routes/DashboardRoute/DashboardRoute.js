@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
+=======
+import React, { Component } from 'react'
+import Dashboard from '../../components/Dashboard/Dashboard'
+>>>>>>> zayar
 
 class DashboardRoute extends Component {
   render() {
     return (
       <section>
-        implement and style me
+        <Dashboard />
       </section>
     );
   }

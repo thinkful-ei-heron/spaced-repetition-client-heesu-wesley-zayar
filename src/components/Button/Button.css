@@ -1,16 +1,14 @@
 .Button {
   font-size: 1.3rem;
   margin: 2%;
-  border: none;
   transition-duration: 0.3s;
   cursor: pointer;
   color: black;
-  border: 0.1rem solid #c228ad;
+  border: 0.1rem solid gray;
   padding: 0.6rem;
-  border-radius: 1rem;
 }
 
 .Button:hover {
-  background-color: #c228ad;
+  background-color: gray;
   color: white;
 }

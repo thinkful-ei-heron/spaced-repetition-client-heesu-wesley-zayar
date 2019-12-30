@@ -27,7 +27,7 @@ export default class Dashboard extends Component {
       <div className="Dashboard">
         <section className="Dashboard-top">
           <h1>Learning Spanish</h1>
-          <button>Start Practicing</button>
+          <button type='submit'>Start Practicing</button>
         </section>
 
         <section className="Dashboard-main">

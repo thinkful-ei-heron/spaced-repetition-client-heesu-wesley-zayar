@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 
-const LanguageContext = React.createContext({
-  error: null,
-  setError: () => { },
-  clearError: () => { },
-})
+const LanguageContext = React.createContext()
 
 export default LanguageContext
 
@@ -17,18 +13,7 @@ export class LanguageContextProvider extends Component {
       head: null,
       total_score: 0,
     },
-    words: [
-      {
-        id: null,
-        language_id: null,
-        original: null,
-        translation: null,
-        next: null,
-        memory_value: null,
-        correct_count: null,
-        incorrect_count: null,
-      }
-    ],
+    words: null,
     error: null,
     setLanguage: () => { },
     setWords: () => { },
@@ -62,6 +47,8 @@ export class LanguageContextProvider extends Component {
 
   render() {
     const value = {
+      language: this.state.language,
+      words: this.state.words,
       setLanguage: this.setLanguage,
       setWords: this.setWords,
       error: this.state.error,

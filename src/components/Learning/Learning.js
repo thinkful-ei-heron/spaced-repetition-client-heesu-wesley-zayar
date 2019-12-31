@@ -17,7 +17,16 @@ export default class Learning extends Component {
   handleGuess = (e) => {
     e.preventDefault()
     const guessElem = document.getElementById('learn-guess-input')
-    LanguageApiService.postGuess(guessElem.value).then(res => {
+    let word = null
+    let word_id = null
+    if (this.state.nextWord) {
+      word = this.context.words.find(word => word.original === this.state.nextWord)
+      word_id = word.id
+    } else {
+      word = null
+    }
+
+    LanguageApiService.postGuess(guessElem.value, word_id).then(res => {
       const {
         nextWord,
         wordCorrectCount,

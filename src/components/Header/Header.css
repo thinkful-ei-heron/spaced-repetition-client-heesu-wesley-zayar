@@ -8,7 +8,7 @@ header {
   overflow: hidden;
   position: fixed;
   background-color: white;
-  padding: 0.7rem;
+  padding: 0.4rem;
   font-family: 'Special Elite', cursive;
 }
 
@@ -37,9 +37,17 @@ nav a {
     font-size: 1.5rem;
   }
 
+  header {
+    padding: 0.5rem;
+  }
+
   .userLogin,
   .signUp-login {
     font-size: 1.2rem;
+  }
+
+  span {
+    font-size: 1.5rem;
   }
 
 }

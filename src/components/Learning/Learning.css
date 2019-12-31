@@ -1,9 +1,16 @@
-.Learning {
+.Learning button:hover {
+  background-color: #306620;
+  color: white;
+}
 
+.Learning {
+  padding-top: 5rem;
 }
 
 .GuessForm {
-
+  background-color: whitesmoke;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .DisplayFeedback {
@@ -18,6 +25,13 @@
 
 }
 
-.DisplayScore p {
-
+footer {
+  padding: 2rem;
 }
+
+@media screen and (min-width: 1025px) {
+  .DisplayScore p {
+    font-size: 1.5rem;
+  }
+}
+

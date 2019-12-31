@@ -1,12 +1,11 @@
 .Dashboard h3 {
   font-size: 1.8rem;
-  padding-top: 1rem;
 }
 
 .Dashboard {
   margin: 0 auto;
   width: 95vw;
-  padding-top: 4rem;
+  padding-top: 5rem;
 }
 
 button {

@@ -29,7 +29,7 @@ nav a {
 
 .userLogin,
 .signUp-login {
-  padding-top: 1.3rem;
+  padding-top: 1rem;
 }
 
 @media screen and (min-width: 1025px) {
@@ -37,5 +37,9 @@ nav a {
     font-size: 1.5rem;
   }
 
+  .userLogin,
+  .signUp-login {
+    font-size: 1.2rem;
+  }
 
 }

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "alias": "spacedRepetition",
+  "name": "spacedRepetition",
+  "routes": [
+    { 
+      "handle": "filesystem" 
+    },
+    { 
+      "src": "/.*", 
+      "dest": "/index.html" 
+    }
+  ]
+}
+
+

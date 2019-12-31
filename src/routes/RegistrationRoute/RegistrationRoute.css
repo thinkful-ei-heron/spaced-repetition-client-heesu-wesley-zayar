@@ -3,6 +3,12 @@ h2 {
 }
 
 .registration p {
-  font-size: 1.3rem;
-  padding-top: 7rem;
+  font-size: 1.6rem;
+  padding-top: 6rem;
+}
+
+@media screen and (min-width: 1025px) {
+  .registration p {
+    font-size: 2rem;
+  }
 }

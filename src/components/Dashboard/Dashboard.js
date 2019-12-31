@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
-import './Dashboard.css'
-import Word from '../Word/Word'
-import LanguageContext from '../../contexts/LanguageContext'
-import LanguageApiService from '../../services/language-api-service'
+import React, { Component } from 'react';
+import './Dashboard.css';
+import Word from '../Word/Word';
+import LanguageContext from '../../contexts/LanguageContext';
+import LanguageApiService from '../../services/language-api-service';
 
 export default class Dashboard extends Component {
-  static contextType = LanguageContext
+  static contextType = LanguageContext;
 
   state = {
     loaded: false,
     words: [],
-  }
+  };
 
   componentDidMount() {
     LanguageApiService.getLanguage().then(resp => {
@@ -20,7 +20,7 @@ export default class Dashboard extends Component {
       .then(() =>
         this.setState({loaded: true})
       )
-  }
+  };
 
   render() {
     return (
@@ -47,7 +47,15 @@ export default class Dashboard extends Component {
           <h3>Total Score</h3>
           <p>Total Score: ____</p>
         </section>
+
+        <footer>
+          Copyright © since 2019 <br /> 
+          Wesley Jacobs & Heesu Kang & Zayar Khin. <br />
+          All rights reserved.
+        </footer>
       </div>
     )
-  }
-}
+  };
+};
+
+

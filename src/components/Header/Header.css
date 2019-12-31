@@ -17,6 +17,10 @@ header a {
   font-size: 1.3rem;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
 span {
   font-size: 1.3rem;
 }

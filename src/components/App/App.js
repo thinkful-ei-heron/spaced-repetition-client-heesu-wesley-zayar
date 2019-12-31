@@ -11,12 +11,12 @@ import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute';
 import './App.css';
 
 export default class App extends Component {
-  state = { hasError: false }
+  state = { hasError: false };
 
   static getDerivedStateFromError(error) {
     console.error(error)
     return { hasError: true }
-  }
+  };
 
   render() {
     const { hasError } = this.state
@@ -52,5 +52,7 @@ export default class App extends Component {
         </main>
       </div>
     );
-  }
-}
+  };
+};
+
+

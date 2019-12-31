@@ -8,6 +8,8 @@ class LearningRoute extends Component {
       </section>
     );
   }
-}
+};
 
-export default LearningRoute
+export default LearningRoute;
+
+

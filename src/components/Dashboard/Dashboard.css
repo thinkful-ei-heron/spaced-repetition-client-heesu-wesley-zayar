@@ -15,15 +15,29 @@
 }
 
 button {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 2%;
-  transition-duration: 0.3s;
   cursor: pointer;
   color: black;
-  border: 0.1rem solid gray;
   padding: 0.6rem;
+  border: 0.3rem solid #b8d843;
+  transition-duration: 0.3s;
+}
+
+button:hover {
+  background-color: #306620;
+  color: white;
 }
 
 .WordList {
-  border: 0.1rem solid gray;
+  flex-direction: column;
+}
+
+.TotalCount {
+  padding-bottom: 5.5rem;
+  font-size: 1.5rem;
+}
+
+footer {
+  padding-bottom: 2rem;
 }

@@ -4,6 +4,7 @@
   padding: 1.5rem;
   font-size: 1.3rem;
   margin: 0 auto;
+  list-style-type: none;
 }
 
 @media screen and (min-width: 1025px) {

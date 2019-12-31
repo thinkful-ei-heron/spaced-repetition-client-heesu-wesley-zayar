@@ -7,22 +7,19 @@ header {
   right: 0;
   overflow: hidden;
   position: fixed;
-  padding: 0.6rem;
-  background-color: bisque;
+  background-color: white;
+  padding: 0.7rem;
+  font-family: 'Special Elite', cursive;
 }
 
 header a {
   text-decoration: none;
   color: black;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 nav a:hover {
   text-decoration: underline;
-}
-
-span {
-  font-size: 1.3rem;
 }
 
 nav a {
@@ -30,9 +27,15 @@ nav a {
   color: black;
 }
 
+.userLogin,
+.signUp-login {
+  padding-top: 1.3rem;
+}
 
 @media screen and (min-width: 1025px) {
-  header {
-    font-size: 1.6rem;
+  header a {
+    font-size: 1.5rem;
   }
+
+
 }

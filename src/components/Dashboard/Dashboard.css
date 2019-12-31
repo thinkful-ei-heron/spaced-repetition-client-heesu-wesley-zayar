@@ -1,17 +1,12 @@
-.Dashboard h1 {
-  text-align: center;
-  font-size: 2rem;
-}
-
 .Dashboard h3 {
-  font-size: 1.3rem;
-  padding-top: 1.4rem;
+  font-size: 1.8rem;
+  padding-top: 1rem;
 }
 
 .Dashboard {
   margin: 0 auto;
   width: 95vw;
-  padding-top: 5rem;
+  padding-top: 4rem;
 }
 
 button {
@@ -24,13 +19,26 @@ button {
   transition-duration: 0.3s;
 }
 
-button:hover {
-  background-color: #306620;
+ul {
+  list-style-type: none;
+  display: inline;
+}
+
+button a {
+  text-decoration: none;
+  color: black;
+}
+
+button a:hover {
   color: white;
 }
 
+button:hover {
+  background-color: #306620;
+}
+
 .WordList {
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .TotalCount {

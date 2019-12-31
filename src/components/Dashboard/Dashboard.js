@@ -28,23 +28,26 @@ export default class Dashboard extends Component {
     return (
       <div className="Dashboard">
         <section className="Dashboard-top">
-          <h2>Learning Spanish</h2>
-          <Link to="/learn">
-            <button>Start Practicing</button>
-          </Link>
-
+          <h2>Learning {this.context.language.name}</h2>
+          <button>
+            <Link to="/learn">
+              Start Practicing
+            </Link>
+          </button>
         </section>
 
         <section className="Dashboard-main">
           <h3>Words to Practice</h3>
-          <div className="WordList">
 
-            {(this.state.loaded && this.context.words) &&
+          <div className="WordList">
+            <ul>
+              {(this.state.loaded && this.context.words) &&
               this.context.words.map(word => {
               return (
-                <Word key={word.id} data={word} />
+                <li><Word key={word.id} data={word} /></li>
               )
             })}
+            </ul>
           </div>
         </section>
 

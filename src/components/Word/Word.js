@@ -10,10 +10,10 @@ export default class Word extends Component {
   render() {
     return (
       <div className="Word">
-        <p>{this.props.data.original}</p>
+        <h4>{this.props.data.original}</h4>
         <p>Translation: {this.props.data.translation}</p>
-        <p>Incorrect: {this.props.data.incorrect_count}</p>
-        <p>Correct: {this.props.data.correct_count}</p>
+        <p>incorrect answer count: {this.props.data.incorrect_count}</p>
+        <p>correct answer count: {this.props.data.correct_count}</p>
       </div>
     )
   };

@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
-import './Dashboard.css';
-import Word from '../Word/Word';
-import LanguageContext from '../../contexts/LanguageContext';
-import LanguageApiService from '../../services/language-api-service';
+
+import React, { Component } from 'react'
+import './Dashboard.css'
+import Word from '../Word/Word'
+import LanguageContext from '../../contexts/LanguageContext'
+import LanguageApiService from '../../services/language-api-service'
+import { Link } from 'react-router-dom'
 
 export default class Dashboard extends Component {
   static contextType = LanguageContext;
@@ -26,8 +28,11 @@ export default class Dashboard extends Component {
     return (
       <div className="Dashboard">
         <section className="Dashboard-top">
-          <h1>Learning Spanish</h1>
-          <button type='submit'>Start Practicing</button>
+          <h2>Learning Spanish</h2>
+          <Link to="/learn">
+            <button>Start Practicing</button>
+          </Link>
+
         </section>
 
         <section className="Dashboard-main">
@@ -45,11 +50,11 @@ export default class Dashboard extends Component {
 
         <section className="TotalCount">
           <h3>Total Score</h3>
-          <p>Total Score: ____</p>
+          <p>Total Correct Answers: {this.context.language.total_score}</p>
         </section>
 
         <footer>
-          Copyright © since 2019 <br /> 
+          Copyright © since 2019 <br />
           Wesley Jacobs & Heesu Kang & Zayar Khin. <br />
           All rights reserved.
         </footer>
@@ -57,5 +62,3 @@ export default class Dashboard extends Component {
     )
   };
 };
-
-

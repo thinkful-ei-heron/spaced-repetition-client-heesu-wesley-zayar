@@ -2,3 +2,6 @@
   text-align: center;
 }
 
+body {
+  background: linear-gradient(-260deg, rgba(250, 241, 142, 0.349), rgba(245, 149, 133, 0.8));;
+}

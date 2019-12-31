@@ -8,24 +8,26 @@ class LoginRoute extends Component {
     history: {
       push: () => { },
     },
-  }
+  };
 
   handleLoginSuccess = () => {
     const { location, history } = this.props
     const destination = (location.state || {}).from || '/'
     history.push(destination)
-  }
+  };
 
   render() {
     return (
-      <section>
+      <section className='login'>
         <h2>Login</h2>
         <LoginForm
           onLoginSuccess={this.handleLoginSuccess}
         />
       </section>
     );
-  }
-}
+  };
+};
 
-export default LoginRoute
+export default LoginRoute;
+
+

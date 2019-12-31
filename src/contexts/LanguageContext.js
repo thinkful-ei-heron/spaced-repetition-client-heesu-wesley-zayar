@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-const LanguageContext = React.createContext()
+const LanguageContext = React.createContext();
 
-export default LanguageContext
+export default LanguageContext;
 
 export class LanguageContextProvider extends Component {
   state = {
@@ -19,31 +19,30 @@ export class LanguageContextProvider extends Component {
     setWords: () => { },
     setError: () => { },
     clearError: () => { },
-
-  }
+  };
 
   setLanguage = (language) => {
     this.setState({
       ...this.state,
       language,
     })
-  }
+  };
 
   setWords = (words) => {
     this.setState({
       ...this.state,
       words,
     })
-  }
+  };
 
   setError = error => {
     console.error(error)
     this.setState({ error })
-  }
+  };
 
   clearError = () => {
     this.setState({ error: null })
-  }
+  };
 
   render() {
     const value = {
@@ -60,5 +59,7 @@ export class LanguageContextProvider extends Component {
         {this.props.children}
       </LanguageContext.Provider>
     )
-  }
-}
+  };
+};
+
+

@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Word.css';
 
 export default class Word extends Component {
   static defaultProps = {
     data: null,
-
-  }
+  };
 
 
   render() {
@@ -16,5 +16,7 @@ export default class Word extends Component {
         <p>Correct: {this.props.data.correct_count}</p>
       </div>
     )
-  }
-}
+  };
+};
+
+

@@ -29,10 +29,11 @@ export default class Dashboard extends Component {
       <div className="Dashboard">
         <section className="Dashboard-top">
           <h2>Learning Spanish</h2>
-          <Link to="/learn">
-            <button>Start Practicing</button>
-          </Link>
-
+          <button>
+            <Link to="/learn">
+              Start Practicing
+            </Link>
+          </button>
         </section>
 
         <section className="Dashboard-main">

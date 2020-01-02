@@ -6,14 +6,35 @@ import LanguageApiService from '../../services/language-api-service';
 export default class Learning extends Component {
   state = {
     nextWord: null,
-    wordCorrectCount: null,
-    wordIncorrectCount: null,
+    wordCorrectCount: 0,
+    wordIncorrectCount: 0,
     totalScore: null,
     isCorrect: null,
     answer: null,
+<<<<<<< HEAD
   };
 
   static contextType = LanguageContext;
+=======
+    guess: null,
+  }
+  static contextType = LanguageContext
+>>>>>>> zayar
+
+  nextWord = (e) => {
+    e.preventDefault()
+    LanguageApiService.getHead().then(res => {
+      this.setState({
+        nextWord: res.nextWord,
+        wordCorrectCount: res.wordCorrectCount,
+        wordIncorrectCount: res.wordIncorrectCount,
+        totalScore: res.totalScore,
+        isCorrect: null,
+        guess: null,
+        answer: null,
+      })
+    })
+  }
 
   handleGuess = (e) => {
     e.preventDefault()
@@ -29,7 +50,6 @@ export default class Learning extends Component {
 
     LanguageApiService.postGuess(guessElem.value, word_id).then(res => {
       const {
-        nextWord,
         wordCorrectCount,
         wordIncorrectCount,
         totalScore,
@@ -37,12 +57,13 @@ export default class Learning extends Component {
         isCorrect,
       } = res
       this.setState({
-        nextWord,
+        ...this.state,
         wordCorrectCount,
         wordIncorrectCount,
         totalScore,
         answer,
         isCorrect,
+        guess: guessElem.value,
       })
     })
   };
@@ -71,20 +92,25 @@ export default class Learning extends Component {
           You were correct! :D
           </h3>
         }
-        
+
         {(this.state.answer && this.state.isCorrect === false) &&
           <h3>
           Good try, but not quite right :(
           </h3>
         }
 
-        <form className="GuessForm" onSubmit={this.handleGuess}>
-          <label>
-            What's the translation for this word? <br />
+
+        {!this.state.guess &&
+          <form className="GuessForm" onSubmit={this.handleGuess}>
+            <label>
+              What's the translation for this word?
             <input id="learn-guess-input" name="learn-guess-input" type="text" placeholder="Type your answer here" required></input>
-          </label> <br />
-          <button type="submit">Submit Your Answer</button>
-        </form>
+            </label>
+            {!this.state.answer &&
+              <button type="submit">Submit your answer</button>
+            }
+          </form>
+        }
 
         {this.state.answer &&
           <div className="DisplayFeedback">
@@ -92,7 +118,9 @@ export default class Learning extends Component {
           </div>
         }
 
-        <button>Try Another Word!</button>
+        {this.state.guess &&
+          <button onClick={this.nextWord}>Try another word!</button>
+        }
 
         <div className="DisplayScore">
           <p>Your total score is: {this.state.totalScore}</p>
@@ -109,5 +137,3 @@ export default class Learning extends Component {
     )
   };
 };
-
-

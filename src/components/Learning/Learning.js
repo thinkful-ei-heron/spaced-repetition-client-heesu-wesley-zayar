@@ -99,7 +99,7 @@ export default class Learning extends Component {
             <label>
               What's the translation for this word?
             <input id="learn-guess-input" name="learn-guess-input" type="text" placeholder="Type your answer here" required></input>
-            </label>
+            </label> <br />
             {!this.state.answer &&
               <button type="submit">Submit your answer</button>
             }

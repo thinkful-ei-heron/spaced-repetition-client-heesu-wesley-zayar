@@ -56,7 +56,7 @@ export default class Dashboard extends Component {
         </section>
 
         <footer>
-          Copyright © since 2019 <br />
+          Copyright © since 2020 <br />
           Wesley Jacobs & Heesu Kang & Zayar Khin <br />
           All rights reserved.
         </footer>

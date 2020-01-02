@@ -82,7 +82,7 @@ class RegistrationForm extends Component {
 
         <footer className="signupBtnLink">
           <Button type='submit'>
-            Sign Up
+            Sign up
           </Button> <br />
           {' '}
 

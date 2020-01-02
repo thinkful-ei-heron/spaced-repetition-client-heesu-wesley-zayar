@@ -1,7 +1,7 @@
-import './Learning.css'
-import React, { Component } from 'react'
-import LanguageContext from '../../contexts/LanguageContext'
-import LanguageApiService from '../../services/language-api-service'
+import './Learning.css';
+import React, { Component } from 'react';
+import LanguageContext from '../../contexts/LanguageContext';
+import LanguageApiService from '../../services/language-api-service';
 
 export default class Learning extends Component {
   state = {
@@ -11,8 +11,9 @@ export default class Learning extends Component {
     totalScore: null,
     isCorrect: null,
     answer: null,
-  }
-  static contextType = LanguageContext
+  };
+
+  static contextType = LanguageContext;
 
   handleGuess = (e) => {
     e.preventDefault()
@@ -24,7 +25,7 @@ export default class Learning extends Component {
       word_id = word.id
     } else {
       word = null
-    }
+    };
 
     LanguageApiService.postGuess(guessElem.value, word_id).then(res => {
       const {
@@ -66,15 +67,15 @@ export default class Learning extends Component {
         </h2>
 
         {(this.state.isCorrect === true) &&
-          <h2>
+          <h3>
           You were correct! :D
-          </h2>
+          </h3>
         }
         
         {(this.state.answer && this.state.isCorrect === false) &&
-          <h2>
+          <h3>
           Good try, but not quite right :(
-          </h2>
+          </h3>
         }
 
         <form className="GuessForm" onSubmit={this.handleGuess}>

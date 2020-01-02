@@ -7,12 +7,12 @@ class RegistrationRoute extends Component {
     history: {
       push: () => {},
     },
-  }
+  };
 
   handleRegistrationSuccess = () => {
     const { history } = this.props
     history.push('/login')
-  }
+  };
 
   render() {
     return (
@@ -28,6 +28,8 @@ class RegistrationRoute extends Component {
       </section>
     );
   }
-}
+};
 
-export default RegistrationRoute
+export default RegistrationRoute;
+
+

@@ -1,10 +1,10 @@
 
-import React, { Component } from 'react'
-import './Dashboard.css'
-import Word from '../Word/Word'
-import LanguageContext from '../../contexts/LanguageContext'
-import LanguageApiService from '../../services/language-api-service'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import './Dashboard.css';
+import Word from '../Word/Word';
+import LanguageContext from '../../contexts/LanguageContext';
+import LanguageApiService from '../../services/language-api-service';
+import { Link } from 'react-router-dom';
 
 export default class Dashboard extends Component {
   static contextType = LanguageContext;
@@ -65,3 +65,5 @@ export default class Dashboard extends Component {
     )
   };
 };
+
+

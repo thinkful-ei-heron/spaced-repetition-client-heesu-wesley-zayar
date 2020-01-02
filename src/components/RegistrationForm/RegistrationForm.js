@@ -8,11 +8,11 @@ import './RegistrationForm.css';
 class RegistrationForm extends Component {
   static defaultProps = {
     onRegistrationSuccess: () => { }
-  }
+  };
 
-  state = { error: null }
+  state = { error: null };
 
-  firstInput = React.createRef()
+  firstInput = React.createRef();
 
   handleSubmit = ev => {
     ev.preventDefault()
@@ -31,11 +31,11 @@ class RegistrationForm extends Component {
       .catch(res => {
         this.setState({ error: res.error })
       })
-  }
+  };
 
   componentDidMount() {
     this.firstInput.current.focus()
-  }
+  };
 
   render() {
     const { error } = this.state
@@ -89,6 +89,6 @@ class RegistrationForm extends Component {
       </form>
     )
   }
-}
+};
 
-export default RegistrationForm
+export default RegistrationForm;

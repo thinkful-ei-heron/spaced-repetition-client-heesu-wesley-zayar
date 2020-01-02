@@ -9,6 +9,8 @@ class NotFoundRoute extends Component {
       </section>
     );
   }
-}
+};
 
-export default NotFoundRoute
+export default NotFoundRoute;
+
+

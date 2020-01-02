@@ -5,11 +5,11 @@ import UserContext from '../../contexts/UserContext';
 import './Header.css';
 
 class Header extends Component {
-  static contextType = UserContext
+  static contextType = UserContext;
 
   handleLogoutClick = () => {
     this.context.processLogout()
-  }
+  };
 
   renderLogoutLink() {
     return (
@@ -26,7 +26,7 @@ class Header extends Component {
         </nav>
       </div>
     )
-  }
+  };
 
   renderLoginLink() {
     return (
@@ -36,7 +36,7 @@ class Header extends Component {
         <Link to='/register'>Sign up</Link>
       </nav>
     )
-  }
+  };
 
   render() {
     return (
@@ -52,7 +52,9 @@ class Header extends Component {
           : this.renderLoginLink()}
       </header>
     );
-  }
-}
+  };
+};
 
-export default Header
+export default Header;
+
+

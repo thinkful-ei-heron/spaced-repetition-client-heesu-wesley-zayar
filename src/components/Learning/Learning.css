@@ -13,25 +13,34 @@
   padding: 2rem;
 }
 
-.DisplayFeedback {
-
-}
-
 .DisplayFeedback p {
-
+  font-size: 1.5rem;
 }
 
 .DisplayScore {
+  padding-bottom: 2rem;
+}
 
+.DisplayScore p {
+  font-size: 1.5rem;
 }
 
 footer {
-  padding: 2rem;
+  padding: 1.5rem;
+  font-size: 0.9rem;
 }
 
 @media screen and (min-width: 1025px) {
   .DisplayScore p {
     font-size: 1.5rem;
+  }
+
+  .Learning span {
+    font-size: 2.5rem;;
+  }
+
+  .Learning h3 {
+    font-size: 1.6rem;
   }
 }
 

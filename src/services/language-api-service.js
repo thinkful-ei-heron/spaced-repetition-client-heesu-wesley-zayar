@@ -1,5 +1,5 @@
-import config from '../config'
-import TokenService from './token-service'
+import config from '../config';
+import TokenService from './token-service';
 
 const LanguageApiService = {
   getLanguage() {
@@ -46,7 +46,8 @@ const LanguageApiService = {
           : res.json()
       )
   },
+};
 
-}
+export default LanguageApiService;
 
-export default LanguageApiService
+

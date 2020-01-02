@@ -1,5 +1,5 @@
 Form {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   padding: 0.7rem;
   align-content: center;
   margin: 0 auto;
@@ -18,6 +18,6 @@ Label {
 
 @media screen and (min-width: 1025px) {
   Form {
-    max-width: 48rem;
+    max-width: 50rem;
   }
 }

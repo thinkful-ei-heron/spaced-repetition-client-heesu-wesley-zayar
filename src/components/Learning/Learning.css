@@ -9,6 +9,7 @@
 
 .GuessForm {
   background-color: whitesmoke;
+  border: 0.1rem solid gray;
   margin: 0 auto;
   padding: 2rem;
 }

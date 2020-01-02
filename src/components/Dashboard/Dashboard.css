@@ -17,6 +17,7 @@ button {
   border: 0.3rem solid #b8d843;
   transition-duration: 0.3s;
   border-radius: 1rem;
+  background-color: white;
 }
 
 ul {

@@ -11,15 +11,9 @@ export default class Learning extends Component {
     totalScore: null,
     isCorrect: null,
     answer: null,
-<<<<<<< HEAD
-  };
-
-  static contextType = LanguageContext;
-=======
     guess: null,
   }
   static contextType = LanguageContext
->>>>>>> zayar
 
   nextWord = (e) => {
     e.preventDefault()

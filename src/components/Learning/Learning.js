@@ -83,7 +83,7 @@ export default class Learning extends Component {
             What's the translation for this word? <br />
             <input id="learn-guess-input" name="learn-guess-input" type="text" placeholder="Type your answer here" required></input>
           </label> <br />
-          <button type="submit">Submit your answer</button>
+          <button type="submit">Submit Your Answer</button>
         </form>
 
         {this.state.answer &&
@@ -92,7 +92,7 @@ export default class Learning extends Component {
           </div>
         }
 
-        <button>Try another word!</button>
+        <button>Try Another Word!</button>
 
         <div className="DisplayScore">
           <p>Your total score is: {this.state.totalScore}</p>
@@ -102,7 +102,7 @@ export default class Learning extends Component {
 
         <footer>
           Copyright © since 2019 <br />
-          Wesley Jacobs & Heesu Kang & Zayar Khin. <br />
+          Wesley Jacobs & Heesu Kang & Zayar Khin <br />
           All rights reserved.
         </footer>
       </div>

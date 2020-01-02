@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import './Dashboard.css';
 import Word from '../Word/Word';
@@ -58,7 +57,7 @@ export default class Dashboard extends Component {
 
         <footer>
           Copyright © since 2019 <br />
-          Wesley Jacobs & Heesu Kang & Zayar Khin. <br />
+          Wesley Jacobs & Heesu Kang & Zayar Khin <br />
           All rights reserved.
         </footer>
       </div>

@@ -81,10 +81,10 @@ export default class Learning extends Component {
 
   render() {
     return (
-      
+
 
       <div className="Learning">
-        <p>Translate the word:</p>
+        <h2>Translate the word:</h2>
 
         <span>{this.state.nextWord}</span>
 
@@ -97,7 +97,7 @@ export default class Learning extends Component {
 
         {!this.state.guess &&
           <form className="GuessForm">
-            <label for="learn-guess-input">
+            <label htmlFor="learn-guess-input">
               What's the translation for this word?
             <input id="learn-guess-input" name="learn-guess-input" type="text" placeholder="Type your answer here" required></input>
             </label> <br />

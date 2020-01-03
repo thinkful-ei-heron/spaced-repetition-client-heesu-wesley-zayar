@@ -31,7 +31,7 @@ describe(`User story: Presented with word`, function() {
     cy.fixture('language-head.json')
       .then(languageHeadFixture => {
         cy.get('main').within($main => {
-          cy.get('p')
+          cy.get('h2').first()
             .should('have.text', 'Translate the word:')
             .siblings('span')
             .should('have.text', languageHeadFixture.nextWord)
@@ -69,15 +69,13 @@ describe(`User story: Presented with word`, function() {
 
     cy.fixture('language-head.json').then(languageHeadFixture => {
       cy.get('main').within($main => {
-        cy.root()
-          .should(
-            'contain',
-            `You have answered this question correctly ${languageHeadFixture.wordCorrectCount} times.`,
-          )
-          .and(
-            'contain',
-            `You have answered this question incorrectly ${languageHeadFixture.wordIncorrectCount} times.`,
-          )
+
+        cy.get('.DisplayScore p').eq(1)
+          .should('have.text', `You have answered this question correctly ${languageHeadFixture.wordCorrectCount} times.`)
+
+        cy.get('.DisplayScore p').eq(2)
+          .should('have.text', `You have answered this question incorrectly ${languageHeadFixture.wordIncorrectCount} times.`)
+
       })
     })
   })

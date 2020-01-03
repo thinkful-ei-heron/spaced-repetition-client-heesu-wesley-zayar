@@ -19,7 +19,7 @@ class RegistrationRoute extends Component {
       <section className='registration'>
         <p>
           ¡Aprendiendo Español! <br />
-          Practice learning a language with the spaced reptition revision technique.
+          Practice learning a language with the spaced repetition revision technique.
         </p>
         <h2>Sign up</h2>
         <RegistrationForm
@@ -31,5 +31,3 @@ class RegistrationRoute extends Component {
 };
 
 export default RegistrationRoute;
-
-

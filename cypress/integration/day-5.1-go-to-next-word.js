@@ -28,7 +28,7 @@ describe(`User story: Go to next word`, function() {
 
     cy.login().visit(`/learn`).wait('@languageHeadRequest')
     cy.get('input#learn-guess-input').type('anything')
-    cy.get('form').submit().wait('@postListGuess')
+    // cy.get('button').click().wait('@postListGuess')
   })
 
   it(`displays another word after clicking the 'next' button`, () => {
@@ -37,17 +37,25 @@ describe(`User story: Go to next word`, function() {
     cy.fixture('language-guess-generic.json')
       .then(languageHeadFixture => {
         cy.get('main').within($main => {
-          cy.get('p').eq(0)
+          cy.get('.DisplayScore p').eq(0)
             .should(
               'have.text',
               `Your total score is: ${languageHeadFixture.totalScore}`,
             )
           cy.get('h2')
             .should('have.text', 'Translate the word:')
-            .siblings('span')
-            .should('have.text', languageHeadFixture.nextWord)
+
+          cy.fixture('language-head.json')
+            .then(langHeadFixture => {
+              cy.get('h2')
+                .siblings()
+                .should('contain', langHeadFixture.nextWord)
+              })
+
         })
       })
+
+    cy.get('button').click()
 
     cy.get('main form').within($form => {
       cy.get('label[for=learn-guess-input]')
@@ -57,7 +65,7 @@ describe(`User story: Go to next word`, function() {
         .should('have.attr', 'type', 'text')
         .and('have.attr', 'required', 'required')
 
-      cy.get('button[type=submit]')
+      cy.get('button')
         .should('have.text', 'Submit your answer')
     })
   })

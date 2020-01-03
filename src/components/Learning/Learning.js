@@ -40,7 +40,7 @@ export default class Learning extends Component {
         word = this.context.words.find(word => word.original === this.state.nextWord)
         word_id = word.id
       } else {
-        word = word
+        word = null
       };
     } catch(e) {
       this.setState({error: e})
@@ -81,22 +81,17 @@ export default class Learning extends Component {
 
   render() {
     return (
+      
+
       <div className="Learning">
-        <h2>
-          Translate the word:
-        </h2>
+        <p>Translate the word:</p>
+
         <span>{this.state.nextWord}</span>
 
-        {(this.state.isCorrect === true) &&
-          <h3>
-          You were correct! :D
-          </h3>
-        }
+        {(this.state.isCorrect === true) && <h2>You were correct!</h2>}
 
         {(this.state.answer && this.state.isCorrect === false) &&
-          <h3>
-          Good try, but not quite right :(
-          </h3>
+          <h2>Good try, but not quite right :(</h2>
         }
 
 
@@ -114,7 +109,7 @@ export default class Learning extends Component {
 
         {this.state.answer &&
           <div className="DisplayFeedback">
-            <p>The correct translation for {this.state.nextWord} was {this.state.answer} and you chose {this.state.guess}!</p>
+            <p>The correct translation for {this.state.nextWord} was {this.state.answer} and you chose {this.state.guess}</p>
           </div>
         }
 
@@ -123,7 +118,7 @@ export default class Learning extends Component {
         }
 
         <div className="DisplayScore">
-          <p>Your total score is: {this.state.totalScore}</p>
+          <p className="totalScr">Your total score is: {this.state.totalScore}</p>
           <p>You have answered this question correctly {this.state.wordCorrectCount} times.</p>
           <p>You have answered this question incorrectly {this.state.wordIncorrectCount} times.</p>
         </div>

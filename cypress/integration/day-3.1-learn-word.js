@@ -31,7 +31,7 @@ describe(`User story: Presented with word`, function() {
     cy.fixture('language-head.json')
       .then(languageHeadFixture => {
         cy.get('main').within($main => {
-          cy.get('h2')
+          cy.get('p')
             .should('have.text', 'Translate the word:')
             .siblings('span')
             .should('have.text', languageHeadFixture.nextWord)
@@ -57,7 +57,7 @@ describe(`User story: Presented with word`, function() {
         .should('have.attr', 'type', 'text')
         .and('have.attr', 'required', 'required')
 
-      cy.get('button[type=submit]')
+      cy.get('button')
         .should('have.text', 'Submit your answer')
     })
   })
@@ -69,13 +69,15 @@ describe(`User story: Presented with word`, function() {
 
     cy.fixture('language-head.json').then(languageHeadFixture => {
       cy.get('main').within($main => {
-
-        // cy.get('p')
-        //   .should('contain', `You have answered this word correctly ${languageHeadFixture.wordCorrectCount} times. You have answered this word incorrectly ${languageHeadFixture.wordIncorrectCount} times.`)
-          // .should(
-          //   'contain',
-          //   `You have answered this word correctly ${languageHeadFixture.wordCorrectCount} times.`,
-          // )
+        cy.root()
+          .should(
+            'contain',
+            `You have answered this question correctly ${languageHeadFixture.wordCorrectCount} times.`,
+          )
+          .and(
+            'contain',
+            `You have answered this question incorrectly ${languageHeadFixture.wordIncorrectCount} times.`,
+          )
       })
     })
   })

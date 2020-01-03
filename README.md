@@ -36,6 +36,12 @@ Dashboard Page
 Learning Page
 ![Learning Page](./screenshot/learning.png)
 
+Correct Answer
+![Correct Answer](./screenshot/correct.png)
+
+Wrong Answer
+![Wrong Anser](./screenshot/wrong.png)
+
 -----------------------
 
 ## Techinologies Used

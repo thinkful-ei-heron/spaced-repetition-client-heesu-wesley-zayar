@@ -7,7 +7,7 @@ Users able to check their answer is correct or incorrect directly on the learnin
 Also, Spaced Repetition will display how many times they got correct or incorrect answers for each word and total score on the dashboard page.
 I hope many users use our Spaced Repetition to improve their Spanish word knowledge skills.
 
-- Live App: [Live](...)
+- Live App: [Live](https://spacedrepetition.now.sh/)
 - Heroku: [Heroku](https://polar-coast-57735.herokuapp.com/)
 - API Server Code: [Server](https://github.com/thinkful-ei-heron/spaced-repetition-api-heesu-wesley-zayar)
 - Client Code:[Client](https://github.com/thinkful-ei-heron/spaced-repetition-client-heesu-wesley-zayar)
@@ -36,7 +36,10 @@ API Server Side deployed on Heroku
 
 - Express.js
 - Node.js
+- PostgreSQL
 - JWT Decode
+
+-----------------------
 
 ## Setup
 
@@ -83,3 +86,7 @@ npm run cypress:run
 ```
 
 This will save video recordings of the test runs in the directory `./cypress/videos/`.
+
+-----------------------
+
+Copyright © Wesley Jacobs & Heesu Kang & Zayar Khin

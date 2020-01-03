@@ -7,7 +7,7 @@ Users able to check their answer is correct or incorrect directly on the learnin
 Also, Spaced Repetition will display how many times they got correct or incorrect answers for each word and total score on the dashboard page.
 I hope many users use our Spaced Repetition to improve their Spanish word knowledge skills.
 
-- Live App: [Live](https://spacedrepetition.now.sh/)
+- Live Page: [Live](https://spacedrepetition.now.sh/)
 - Heroku: [Heroku](https://polar-coast-57735.herokuapp.com/)
 - API Server Code: [Server](https://github.com/thinkful-ei-heron/spaced-repetition-api-heesu-wesley-zayar)
 - Client Code:[Client](https://github.com/thinkful-ei-heron/spaced-repetition-client-heesu-wesley-zayar)
@@ -19,6 +19,22 @@ I hope many users use our Spaced Repetition to improve their Spanish word knowle
 Username: admin
 
 Password: pass
+
+-----------------------
+
+## Screenshot
+
+Sign up Page
+![Signup page](./screenshot/signup.png)
+
+Login Page
+![login page](./screenshot/login.png)
+
+Dashboard Page
+![Dashboard Page](./screenshot/dashboard.png)
+
+Learning Page
+![Learning Page](./screenshot/learning.png)
 
 -----------------------
 

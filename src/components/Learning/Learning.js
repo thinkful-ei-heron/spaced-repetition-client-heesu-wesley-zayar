@@ -85,7 +85,6 @@ export default class Learning extends Component {
 
       <div className="Learning">
         <h2>Translate the word:</h2>
-
         <span>{this.state.nextWord}</span>
 
         {(this.state.isCorrect === true) && <h2>You were correct!</h2>}

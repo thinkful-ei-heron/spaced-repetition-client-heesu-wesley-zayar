@@ -7,6 +7,10 @@
   padding-top: 5rem;
 }
 
+.Learning span {
+  font-size: 2.5rem;
+}
+
 .GuessForm {
   background-color: whitesmoke;
   border: 0.1rem solid gray;
@@ -36,12 +40,9 @@ footer {
     font-size: 1.5rem;
   }
 
-  .Learning span {
-    font-size: 2.5rem;;
-  }
-
   .Learning h3 {
     font-size: 1.6rem;
   }
+
 }
 

@@ -81,10 +81,10 @@ export default class Learning extends Component {
 
   render() {
     return (
-      
+
 
       <div className="Learning">
-        <p>Translate the word:</p>
+        <h2>Translate the word:</h2>
 
         <span>{this.state.nextWord}</span>
 

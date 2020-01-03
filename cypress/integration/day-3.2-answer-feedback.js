@@ -147,7 +147,7 @@ describe(`User story: Answer feedback`, function() {
               `Your total score is: ${correctFixture.totalScore}`,
 
             )
-          cy.get('h3')
+          cy.get('h2').eq(1)
             .should(
               'have.text',
               `You were correct!`,
@@ -156,7 +156,7 @@ describe(`User story: Answer feedback`, function() {
           cy.get('.DisplayFeedback p')
             .should(
               'have.text',
-              `The correct translation for ${languageHeadFixture.nextWord} was ${incorrectFixture.answer} and you chose ${guess}`,
+              `The correct translation for ${languageHeadFixture.nextWord} was ${correctFixture.answer} and you chose ${guess}`,
             )
           cy.get('button')
             .should(

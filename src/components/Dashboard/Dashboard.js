@@ -51,7 +51,7 @@ export default class Dashboard extends Component {
         </section>
 
         <section className="TotalCount">
-          <h3>Total Score</h3>
+          <h4>Total Score</h4>
           <p>Total Correct Answers: {this.context.language.total_score}</p>
         </section>
 
@@ -64,5 +64,3 @@ export default class Dashboard extends Component {
     )
   };
 };
-
-

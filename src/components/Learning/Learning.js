@@ -35,12 +35,17 @@ export default class Learning extends Component {
     const guessElem = document.getElementById('learn-guess-input')
     let word = null
     let word_id = null
-    if (this.state.nextWord) {
-      word = this.context.words.find(word => word.original === this.state.nextWord)
-      word_id = word.id
-    } else {
-      word = null
-    };
+    try {
+      if (this.state.nextWord && guessElem.value) {
+        word = this.context.words.find(word => word.original === this.state.nextWord)
+        word_id = word.id
+      } else {
+        word = word
+      };
+    } catch(e) {
+      this.setState({error: e})
+    }
+
 
     LanguageApiService.postGuess(guessElem.value, word_id).then(res => {
       const {
@@ -78,8 +83,9 @@ export default class Learning extends Component {
     return (
       <div className="Learning">
         <h2>
-          Translate the word: <span>{this.state.nextWord}</span>
+          Translate the word:
         </h2>
+        <span>{this.state.nextWord}</span>
 
         {(this.state.isCorrect === true) &&
           <h3>
@@ -95,13 +101,13 @@ export default class Learning extends Component {
 
 
         {!this.state.guess &&
-          <form className="GuessForm" onSubmit={this.handleGuess}>
-            <label>
+          <form className="GuessForm">
+            <label for="learn-guess-input">
               What's the translation for this word?
             <input id="learn-guess-input" name="learn-guess-input" type="text" placeholder="Type your answer here" required></input>
             </label> <br />
             {!this.state.answer &&
-              <button type="submit">Submit your answer</button>
+              <button onClick={this.handleGuess}>Submit your answer</button>
             }
           </form>
         }
